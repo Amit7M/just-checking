@@ -1,0 +1,214 @@
+git rember
+
+
+
+git add =  to add file in stagin area 
+
+git add .   =  to add all at once 
+
+
+git log =  to see all commits when someone has commit
+
+git status = to see the status
+
+git commit -m " text "
+
+clear
+
+touch =  to creat a file '
+
+mkdir =  to craet a folder
+
+cd = rto drill dow into some folder
+
+ls =  list see that you are currently in 
+
+cd .. =  to go back 1 step 
+
+gil log --oneline =  shows you the hash code and only the message you wrote when commiting
+
+git commit --amend == to change a bit in previous file only
+
+git branch = to see on where and which branch we are currently on it 
+
+git branch <text> = to creat an new branch
+
+git commit -a -m "comment"  = in this way you can commit and add stage in one single line   ( -a -m == -am )
+
+git switch branch_name  =     to switch from one branch to another
+
+git switch -c name =  this will creat and switch 
+
+git branch  =   to creat the branch
+
+git branch -d branch_name  =   to delet the branch
+
+git checkout hash =  to timetravel back and forth this state will detached the head  
+
+git switch -  =   will land you the last branch that you where
+ 
+git checkout -b branch-name (hash) .......
+
+git checkout HEAD~1 == PREVIOS, HEAD~2 == PREVIOUS-1,
+
+git restore <file_name> = to get back to the previous state where the head is ....
+
+git restore --staged file_name  =  to unstaged file --------
+
+
+
+IN ORDER TO DELETE THE COMMITS........
+
+git reset hash  =  this will delete the commit above but the " data will we remain on the working directory"    plane reset
+
+                    this is usefull if you want tha remaning change to move to another branch
+
+git reset --hard hash  =  will undo or remove commit completly from both locatio  the working dir/repo 
+ 
+
+
+
+
+
+
+
+
+    GIT DIFF .................................
+
+   
+git diff       =  shows the changes that you have made since the lst commit  and the change that has't staged yet .
+
+git diff Head  =  shows the all changes from the last commit does't matter  you satged  or not.
+
+git diff --staged  / -- chased  =  shows the only changes that has staged yet.
+
+
+ if you wanna see change specifficaly .........
+
+                                                          use    git diff --staged [ file name ]
+
+
+git diff branch1..branch2 = to see the change between two branches     the order maters
+
+git diff commit1..commit2 = to see the changes between two comiit 
+
+
+
+
+  git stash .....................................    
+
+
+ " there are certain situstion where we have " changes " and we need to move onto the another branch, in some cases we need to
+   first commit only then we can move to another branch or we have conflict.  
+
+
+" git stash hold or possses the file in a hidden place  whenever we stash, and we can also get those files when we need it.
+
+
+
+git stash     =  stash the changes that has staged on unstaged .
+
+git stash pop =   gives the file that has stash and remove it from the stash area.
+
+git stash apply = gives the file that has stash and don't remove it from the stash area and we can use these change in any other
+
+                  branch.
+
+
+git clone url = to clone the project .
+
+git remote / git remote -v  =  show you the list of current repostery that you have pull from github.
+
+git remote add name url     =  to add a remote to the local machine....
+
+git push remote branch      =  to push your code onto the github reposetry.	
+
+git branch -r               =  to check the current, most resrent bran. on origion    " remote tracking branch"    check branch git hub branch 
+
+
+rember ..........
+
+when we push our master branch onto the github,  it will creat an new master branch on git hub  " master -> master " , by default .
+
+we can also put a local branch to onto the github another barch jut by...    " git push origin local_branch : github_branch "
+
+
+oaky-docky ----- if you wanna get githup repo branch onto your local reposetry  =  just git switch remote-B.name .....
+
+this will creat an 
+
+
+
+fetch ---------
+
+git fetch <remote>   ....    to fetch whole remote 
+
+git fetch <remote> < branch >  to fetch specific branch
+
+pull-----------
+
+git pull  =   git fetch + git merge
+
+git pull remote branch_name   =   to merge with local branch what you have fetch from  github thta you currenly on.
+
+git pull                      =   to feth and merge automaticall on the currnt brunch you are on.     it is shoter way. 
+
+
+
+rebasing .......
+
+for clean the history...   first go to the feature branch apply   "  git rebase master "   
+
+
+
+need to change the commit naming/itrating _____________
+
+git rebase -i HEAD~2   =   1. Pick, means not change anything 
+                           2. drop, delete the commit completly
+                           3. fixedup, to merger two commit into one, whichever commit you change that will merge with previous
+                                       one the "commit message will delet and have the message of previous one"   
+
+git tag ...........
+
+
+git generally we use to naming or giving a perticular set of version aka sementaic version, git tags are two types 
+
+1 light weight where we use just/ give versions =  git tag < nametag>
+
+
+2. annotated tags = use to give some additional info   ==  git tag -a < tagname>
+
+
+viewing tag = git tag -l " * beta *"
+
+checking out tags =  git checkout <tag>     switch through tags by detaching head
+
+git tag -d git name =  to delete tags 
+
+git show tagname = to see full details who put the tags here 
+
+git push --tags   = to push you all tags at once
+
+
+
+
+.....  we can store a "text " or any file without commiting, this will store in .git , object folder, and will give 
+       you the hash code to get the data back       
+
+echo " text" | git hash-object --stdin  =   to just give you the hash, but not store 
+echo " text" | git hash-object --stdin -w  =   to just give you the hash,  store  the file
+
+git hash-object file_name = to not store the file,but give the hash
+
+git hash-object file_name -w = to  store the file,but give the hash
+
+git cat-file -p hash  ==  to see the content of the file " p = print"
+
+git cat-file -p hash > file_name  =  get the content from one file to put into another file.
+
+
+            
+
+
+
+ 
