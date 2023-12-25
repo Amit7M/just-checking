@@ -207,7 +207,7 @@ git cat-file -p hash  ==  to see the content of the file " p = print"
 git cat-file -p hash > file_name  =  get the content from one file to put into another file.
 
 
-            
+            https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/
 
 
 
