@@ -1,0 +1,1 @@
+To remove a remote branch = git push origin --delete <branch>;
